@@ -44,7 +44,7 @@
                   }
                   echo '
                   <tr>
-                    <td><a href="supportfiles/deleteUserProcess.php?idUser=' . $rows["id"] . '">У</a><a href="changeUser.php?idUser=' . $rows["id"] . '">Р</a></td>
+                    <td><a href="supportfiles/deleteUserProcess.php?idUser=' . $rows["id"] . '">У</a><a href="changeUser.php?idUser=' . $rows["id"] . '">Р</a><a href="../ordersForm/orderForm.php?idUser=' . $rows["id"] . '&action=1">Заказы</a></td>
                     <td>' . $rows["id"] . '</td>
                     <td>' . $rows["login"] . '</td>
                     <td>' . $rows["password"] . '</td>

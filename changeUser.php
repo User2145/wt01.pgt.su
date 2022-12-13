@@ -25,7 +25,8 @@
   ?>
   <div class="boxy">
       <main>
-        <form action="supportfiles/addUserProcess.php" method="post">
+        <form action="supportfiles/changeUserProcess.php" method="post">
+          <input type="text" name="id" value="<?php echo $idUser ?>" style="display: none;">
           <p>
             <label>Логин:<br></label>
             <input name="login" type="text" size="15" maxlength="15" value="<?php echo $login ?>">
@@ -71,7 +72,7 @@
               }
             ?>
           </p>
-          <p><input type="submit" name="clac" value="Добавить"></p>
+          <p><input type="submit" name="clac" value="Изменить"></p>
         </form>
         <a href="userForm.php" class='btnCh'>Назад</a>
       </main>
