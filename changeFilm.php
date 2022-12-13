@@ -11,6 +11,8 @@
   <?php include("header.php") ?>
   <?php
     $idFilm = $_GET['idFilm'];
+    $idSession1 = $_GET['idSession1'];
+    $idSession2 = $_GET['idSession2'];
     $q = "SELECT * FROM films WHERE `films`.`id` = '$idFilm' ";
     $result = mysqli_query($connection, $q);
     while ($rows = mysqli_fetch_array($result)){

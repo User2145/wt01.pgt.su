@@ -23,4 +23,5 @@
   $q = "UPDATE `session_time` SET `sessionTime` = '$sessionTime2' WHERE `session_time`.`id` = '$idSession2'";
   $result = mysqli_query($connection, $q);
 
+  header("Location:../../filmForm.php");
 ?>
