@@ -5,9 +5,12 @@
     $card = $_POST['card'];
     $idUser = $_SESSION['users']['id'];
     $idSession_time = $_POST['idSession_time'];
+    $day = date('jS');
+    $month = date('F');
+    $year = date('Y');
     $place = 1;
 
-    $q = "INSERT INTO orders(place, card, idFilm, idUser, idSession_time) VALUES ('$place', '$card', '$idFilm', '$idUser', '$idSession_time')";
+    $q = "INSERT INTO orders(place, card, idFilm, idUser, idSession_time, day, month, year) VALUES ('$place', '$card', '$idFilm', '$idUser', '$idSession_time', '$day', '$month', '$year')";
     $result = mysqli_query($connection, $q);
     header("Location:../../index.php");
   }

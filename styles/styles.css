@@ -141,6 +141,18 @@ footer li a {
   margin-right: 25%;
   width: 50%;
 }
+.techsupport .dialog {
+  border: 2px solid;
+  width: 50%;
+  height: 200px;
+}
+.techsupport .dialog .sender {
+  background-color: #7FFFD4;
+}
+.techsupport .dialog .outputer {
+  background-color: #FFF0F5;
+  text-align: right;
+}
 .techsupport textarea {
   width: 50%;
 }
@@ -148,9 +160,6 @@ footer li a {
   margin-top: 5px;
   margin-bottom: 5px;
   width: 50%;
-}
-.techsupport p {
-  font-size: 30px;
 }
 
 /* Форма редактирования фильмов */

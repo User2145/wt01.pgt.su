@@ -11,14 +11,22 @@
   <?php include 'header.php' ?>
 
   <main>
-    <form class="techsupport" action="/">
-      <p>Ваше имя:</p>
-      <input type="text" size "40"></input>
-      <p>В чем заключается проблема</p>
-      <textarea cols="40" rows="3"></textarea>
+    <form class="techsupport" action="techsupport.php" method="post">
+      <div class="dialog">
+
+      </div>
+      <p>Сообщение</p>
+      <textarea cols="40" rows="3" name="massage"></textarea>
       <input type="submit" value="Отправить">
     </form>
   </main>
+  <?php
+    $massage = $_POST["massage"];
+    $idUser = $_SESSION["id"];
+    $idManager = 3;
+    $q = "INSERT INTO massages(massage, idUser, idManager, direction) VALUES ('$massage', '$idUser', 'idManager', '1')";
+    $result = mysqli_query($connection, $q);
+  ?>
   <?php include 'footer.php' ?>
 </body>
 </html>

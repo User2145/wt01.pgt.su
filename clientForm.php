@@ -23,7 +23,7 @@
         echo "<p class='nameline'>Здравствуйте, " . $_SESSION['users']['name'] . "!</p>";
       }
     ?>
-    <a href='' class='btnclient'>История заказов</a>
+    <a href='ordersDataBase.php' class='btnclient'>История заказов</a>
     <?php
       if ($_SESSION['users']['type'] == 1){
         echo "<a href='addFilm.php' class='btnclient'>Добавить фильм</a>";
