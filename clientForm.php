@@ -26,7 +26,6 @@
     <a href='ordersDataBase.php' class='btnclient'>История заказов</a>
     <?php
       if ($_SESSION['users']['type'] == 1){
-        echo "<a href='addFilm.php' class='btnclient'>Добавить фильм</a>";
         echo "<a href='filmForm.php' class='btnclient'>Форма фильмов</a>";
       }
     ?>

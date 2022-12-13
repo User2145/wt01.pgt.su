@@ -28,13 +28,15 @@
                 </tr>';
 
                 $sqlQuery = 'SELECT * FROM `films`;';
+                $sessionTime1 = " ";
+                $sessionTime2 = "1";
                 global $connection;
                 $result = mysqli_query($connection, $sqlQuery);
                 while ($rows = mysqli_fetch_array($result)){
-                  $sqlQuery = 'SELECT * FROM `films`, `session_time` WHERE (`films`.`' . $rows["id"] . '` = `session_time`.`idFilm`);';
+                  $sqlQuery = 'SELECT `sessionTime` FROM `session_time` WHERE (`session_time`.`idFilm` = ' . $rows["id"] . ');';
                   $session = mysqli_query($connection, $sqlQuery);
                   $i = 1;
-                  while ($rows2 = mysqli_fetch_array($result)){
+                  while ($rows2 = mysqli_fetch_array($session)){
                     if ($i==1){
                       $sessionTime1= $rows2["sessionTime"];
                     }
@@ -50,11 +52,12 @@
                     <td>' . $rows["name"] . '</td>
                     <td>' . $rows["genre"] . '</td>
                     <td>' . $rows["img"] . '</td>
-                    <td>' . $sessionTime1 . ',' . $sessionTime2 . '</td>
+                    <td>' . '<input type="datetime-local" value=' . $sessionTime1 . ' readonly>' . ',' . '<input type="datetime-local" value=' . $sessionTime2 . ' readonly>' . '</td>
                   </tr>';
                 }
               ?>
           </table>
+          <a href='addFilm.php' class='btnCh'>Добавить фильм</a>
         </form>
       </main>
   </div>
