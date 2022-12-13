@@ -27,6 +27,7 @@
     <?php
       if ($_SESSION['users']['type'] == 1){
         echo "<a href='filmForm.php' class='btnclient'>Форма фильмов</a>";
+        echo "<a href='userForm.php' class='btnclient'>Форма пользователей</a>";
       }
     ?>
     <a href='supportfiles/exitProcess.php' class='btnclient'>Выйти</a>

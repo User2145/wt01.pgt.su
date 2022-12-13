@@ -60,6 +60,7 @@
               ?>
           </table>
           <a href='addFilm.php' class='btnCh'>Добавить фильм</a>
+          <a href='clientForm.php' class='btnCh'>Назад</a>
         </form>
       </main>
   </div>
