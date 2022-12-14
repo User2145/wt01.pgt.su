@@ -10,7 +10,7 @@
 <body>
   <?php
     include("../header.php");
-    include("../supportfiles/lib/test.php");
+    include('../supportfiles/config.php');
   ?>
   <div class="boxy">
       <main>
@@ -18,7 +18,6 @@
           <table>
               <?php
                 $act = $_GET['action'];
-                $idUser = $_GET['idUser'];
                 echo '
                 <tr>
                   <td>Действия</td>
@@ -30,7 +29,11 @@
                   <td>Дата</td>
                 </tr>';
                 if ($act == 0){
-                  $sqlQuery = 'SELECT * FROM `orders`;';
+                  $sqlQuery = 'SELECT `orders`.`id`, `orders`.`place`, `orders`.`card`, `orders`.`day`, `orders`.`month`, `orders`.`year`, `films`.`name`, `users`.`name` FROM `orders`, `films`, `users` WHERE `films`.`id`=`orders`.`idFilm` AND `orders`.`idUser`=`users`.`id`;';
+                }
+                if ($act == 1){
+                  $idUser = $_GET['idUser'];
+                  $sqlQuery = 'SELECT `orders`.`id`, `orders`.`place`, `orders`.`card`, `orders`.`day`, `orders`.`month`, `orders`.`year`, `films`.`name`, `users`.`name` FROM `orders`, `films`, `users` WHERE `orders`.`idUser`= ' . $idUser . ' AND `users`.`id`= ' . $idUser . ' AND `films`.`id`=`orders`.`idFilm`;';
                 }
                 global $connection;
                 $type = 1;
@@ -38,19 +41,19 @@
                 while ($rows = mysqli_fetch_array($result)){
                   echo '
                   <tr>
-                    <td><a href="supportfiles/deleteUserProcess.php?idUser=' . $rows["id"] . '">У</a><a href="changeUser.php?idUser=' . $rows["id"] . '">Р</a></td>
-                    <td>' . $rows["id"] . '</td>
-                    <td>' . $rows["place"] . '</td>
-                    <td>' . $rows["card"] . '</td>
-                    <td>' . $rows["nameFilm"] . '</td>
-                    <td>' . $rows["nameUser"] . '</td>
+                    <td><a href="deleteOrderProcess.php?id=' . $rows[0] . '">У</a><a href="changeUser.php?idUser=' . $rows[0] . '">Р</a></td>
+                    <td>' . $rows[0] . '</td>
+                    <td>' . $rows[1] . '</td>
+                    <td>' . $rows[2] . '</td>
+                    <td>' . $rows[6] . '</td>
+                    <td>' . $rows[7] . '</td>
                     <td>' . $rows["day"] . ' ' . $rows["month"] . ' ' . $rows["year"] . '</td>
                   </tr>';
                 }
               ?>
           </table>
-          <a href='addUser.php' class='btnCh'>Добавить пользователя</a>
-          <a href='clientForm.php' class='btnCh'>Назад</a>
+          <a href='addOrderForm.php' class='btnCh'>Добавить заказ</a>
+          <a href='../clientForm.php' class='btnCh'>Назад</a>
         </form>
       </main>
   </div>
