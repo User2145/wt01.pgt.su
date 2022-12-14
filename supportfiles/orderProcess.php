@@ -8,7 +8,7 @@
     $day = date('jS');
     $month = date('F');
     $year = date('Y');
-    $place = 1;
+    $place = $_POST['place'];
 
     $q = "INSERT INTO orders(place, card, idFilm, idUser, idSession_time, day, month, year) VALUES ('$place', '$card', '$idFilm', '$idUser', '$idSession_time', '$day', '$month', '$year')";
     $result = mysqli_query($connection, $q);
