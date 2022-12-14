@@ -15,6 +15,7 @@
         <?php
           include('supportfiles/config.php');
 
+          $idPlace = $_GET['idPlace'];
           $idFilm = $_GET['idFilm'];
 
           $q = 'SELECT session_time.id, session_time.sessionTime FROM `session_time`, `films` WHERE films.id = session_time.idFilm AND films.id = ' . $idFilm . ';';
@@ -29,39 +30,25 @@
       <form action="supportfiles/orderProcess.php" method="post">
         <input type="text" name="idFilm" value="<?php echo $idFilm ?>" style="display: none;">
         <table>
-          <tr>
-            <td><a href=''><img src="../res/chair.png" alt="альтернативный текст" /></a></td>
-            <td><a href=''><img src="../res/chair.png" alt="альтернативный текст" /></a></td>
-            <td><a href=''><img src="../res/chair.png" alt="альтернативный текст" /></a></td>
-            <td><a href=''><img src="../res/chair.png" alt="альтернативный текст" /></a></td>
-            <td><a href=''><img src="../res/chair.png" alt="альтернативный текст" /></a></td>
-            <td><a href=''><img src="../res/chair.png" alt="альтернативный текст" /></a></td>
-          </tr>
-          <tr>
-            <td><a href=''><img src="../res/chair.png" alt="альтернативный текст" /></a></td>
-            <td><a href=''><img src="../res/chair.png" alt="альтернативный текст" /></a></td>
-            <td><a href=''><img src="../res/chair.png" alt="альтернативный текст" /></a></td>
-            <td><a href=''><img src="../res/chair.png" alt="альтернативный текст" /></a></td>
-            <td><a href=''><img src="../res/chair.png" alt="альтернативный текст" /></a></td>
-            <td><a href=''><img src="../res/chair.png" alt="альтернативный текст" /></a></td>
-          </tr>
-          <tr>
-            <td><a href=''><img src="../res/chair.png" alt="альтернативный текст" /></a></td>
-            <td><a href=''><img src="../res/chair.png" alt="альтернативный текст" /></a></td>
-            <td><a href=''><img src="../res/chair.png" alt="альтернативный текст" /></a></td>
-            <td><a href=''><img src="../res/chair.png" alt="альтернативный текст" /></a></td>
-            <td><a href=''><img src="../res/chair.png" alt="альтернативный текст" /></a></td>
-            <td><a href=''><img src="../res/chair.png" alt="альтернативный текст" /></a></td>
-          </tr>
-          <tr>
-            <td><a href=''><img src="../res/chair.png" alt="альтернативный текст" /></a></td>
-            <td><a href=''><img src="../res/chair.png" alt="альтернативный текст" /></a></td>
-            <td><a href=''><img src="../res/chair.png" alt="альтернативный текст" /></a></td>
-            <td><a href=''><img src="../res/chair.png" alt="альтернативный текст" /></a></td>
-            <td><a href=''><img src="../res/chair.png" alt="альтернативный текст" /></a></td>
-            <td><a href=''><img src="../res/chair.png" alt="альтернативный текст" /></a></td>
-          </tr>
+          <?php
+            $col = 1;
+            while ($col < 5){
+              $row = 1;
+              echo '<tr>';
+              while ($row < 7){
+                $td = '<td><a href="?idFilm=' . $idFilm . '&idPlace=' . $col . '' . $row . '"><img src="../res/chair.png" alt="альтернативный текст" /></a></td>';
+                echo $td;
+                $row = $row + 1;
+              }
+              echo '</tr>';
+              $col = $col + 1;
+            }
+          ?>
         </table>
+        <p>
+          <label>Место в зале:<br></label>
+          <input type="text" name="place" value="<?php echo $idPlace ?>">
+        </p>
         <p>
           <label>Номер карты:<br></label>
           <input name="card" type="text" size="15" maxlength="15">

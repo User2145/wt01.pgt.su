@@ -18,7 +18,7 @@
         foreach ($sql as $row){
           echo '
             <div class="blog">
-            <a href="order.php?idFilm=' . $row["id"] . '"><img src=res/film/' . $row["img"] . '></a>
+            <a href="order.php?idFilm=' . $row["id"] . '&idPlace=0"><img src=res/film/' . $row["img"] . '></a>
             <p class="genre">' . $row["name"] . '</p>
             <p class="genre">' . $row["genre"] . '</p>
             <a href="order.php?idFilm=' . $row["id"] . '" class="orderbutton">Сеансы</a>
