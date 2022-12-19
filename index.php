@@ -21,7 +21,7 @@
             <a href="order.php?idFilm=' . $row["id"] . '&idPlace=0"><img src=res/film/' . $row["img"] . '></a>
             <p class="genre">' . $row["name"] . '</p>
             <p class="genre">' . $row["genre"] . '</p>
-            <a href="order.php?idFilm=' . $row["id"] . '" class="orderbutton">Сеансы</a>
+            <a href="order.php?idFilm=' . $row["id"] . '&idPlace=0" class="orderbutton">Сеансы</a>
             </div>';
         };
       ?>
