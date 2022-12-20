@@ -11,7 +11,7 @@
   <?php include("/header.php") ?>
   <div class="boxy">
       <main>
-        <form action="supportfiles/addFilmProcess.php" method="post">
+        <form action="supportfiles/addFilmProcess.php" method="post" class="formProcess">
           <p>
             <label>Место:<br></label>
             <input name="place" type="text" size="15" maxlength="15">

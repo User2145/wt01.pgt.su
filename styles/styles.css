@@ -182,7 +182,7 @@ footer li a {
 .btnCh {
   text-decoration: none;
   margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 10%;
   color: black;
   background-color: #B0C4DE;
   width: 150px;
@@ -190,6 +190,17 @@ footer li a {
 #filmForm {
   display: flex;
   flex-direction: column;
+}
+
+/* Форма редактирования */
+.formProcess {
+  margin-left: 10%;
+}
+
+.formProcess input {
+  width: 50%;
+  background-color: #48D1CC;
+  font-size: 15px;
 }
 
 /* Underline From Center */

@@ -11,7 +11,7 @@
   <?php include("header.php") ?>
   <div class="boxy">
       <main>
-        <form action="supportfiles/addFilmProcess.php" method="post">
+        <form action="supportfiles/addFilmProcess.php" method="post" class="formProcess">
           <p>
             <label>Название фильма:<br></label>
             <input name="name" type="text" size="15" maxlength="15">
