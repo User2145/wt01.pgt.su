@@ -15,11 +15,12 @@
   <div class="boxy">
       <main>
         <form id="filmForm">
+          <h3>Форма таблицы пользователей</h3>
           <table>
               <?php
                 $act = $_GET['action'];
                 echo '
-                <tr>
+                <tr class="headerTR">
                   <td>Действия</td>
                   <td>Идентификатор</td>
                   <td>Место</td>

@@ -15,10 +15,11 @@
   <div class="boxy">
       <main>
         <form id="filmForm">
+          <h3>Форма таблицы пользователей</h3>
           <table>
               <?php
                 echo '
-                <tr>
+                <tr class="headerTR">
                   <td>Действия</td>
                   <td>Идентификатор</td>
                   <td>Логин</td>

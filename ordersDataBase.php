@@ -12,10 +12,11 @@
 
   <main>
     <div class="contmain">
+      <h3>Форма таблицы фильма</h3>
       <table>
           <?php
             echo '
-            <tr>
+            <tr class="headerTR">
               <td>Название фильма</td>
               <td>Дата оформления заказа</td>
               <td>Сессия</td>

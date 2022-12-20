@@ -12,6 +12,7 @@
 
   <main>
     <form class="techsupport" action="techsupport.php" method="post">
+      <h3>Чат с техподдержкой</h3>
       <div class="dialog">
 
       </div>

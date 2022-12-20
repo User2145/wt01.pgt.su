@@ -11,12 +11,12 @@
   <?php include("header.php") ?>
   <div class="boxy">
       <main>
-        <form method="post" action="supportfiles/autorizProcess.php">
+        <form method="post" action="supportfiles/autorizProcess.php" class="formProcess">
           <h2>Авторизация</h2><br>
           <label for="username">Логин</label><br>
-          <input type="text" name="username" required><br>
+          <input type="text" name="username" required><br><br>
           <label for="password">Пароль</label><br>
-          <input type="password" name="password" required><br>
+          <input type="password" name="password" required><br><br>
           <input type="submit" value="Войти" name="input"></input><br>
           <p>Не зарегистрированы? <a href="registration.php">Зарегистрироваться</a></p>
         </form>

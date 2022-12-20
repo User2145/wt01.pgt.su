@@ -88,6 +88,28 @@ main {
   margin-right: 10px;
   font-size: 20px;
 }
+.clientform .clientButton {
+  margin-left: 40px;
+}
+
+/* Форма о нас */
+
+.aboutus h4{
+  margin-left: 60px;
+}
+
+.aboutus p{
+  margin-left: 40px;
+}
+
+.aboutus {
+  margin-left: 10%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 20%;
+  border: 2px solid;
+  border-radius: 15px 0;
+}
 
 /* Форма новостей */
 
@@ -199,8 +221,13 @@ footer li a {
 
 .formProcess input {
   width: 50%;
-  background-color: #48D1CC;
+  background-color: #B0C4DE;
   font-size: 15px;
+}
+
+/* Форма вывода таблицы */
+.headerTR td {
+  font-size: 20px;
 }
 
 /* Underline From Center */

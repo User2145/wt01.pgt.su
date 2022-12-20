@@ -11,7 +11,7 @@
   <?php include("header.php") ?>
   <div class="boxy">
       <main>
-        <form action="supportfiles/registProcess.php" method="post">
+        <form action="supportfiles/registProcess.php" method="post" class="formProcess">
           <h2>Регистрация</h2><br>
           <p>
             <label>Ваш логин:<br></label>

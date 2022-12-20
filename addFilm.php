@@ -12,6 +12,7 @@
   <div class="boxy">
       <main>
         <form action="supportfiles/addFilmProcess.php" method="post" class="formProcess">
+          <h3>Форма добавления фильма</h3>
           <p>
             <label>Название фильма:<br></label>
             <input name="name" type="text" size="15" maxlength="15">

@@ -25,8 +25,9 @@
   ?>
   <div class="boxy">
       <main>
-        <form action="supportfiles/changeUserProcess.php" method="post">
+        <form action="supportfiles/changeUserProcess.php" method="post" class="formProcess">
           <input type="text" name="id" value="<?php echo $idUser ?>" style="display: none;">
+          <h3>Форма изменения пользователя</h3>
           <p>
             <label>Логин:<br></label>
             <input name="login" type="text" size="15" maxlength="15" value="<?php echo $login ?>">

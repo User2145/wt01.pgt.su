@@ -14,7 +14,7 @@
     include ("supportfiles/config.php");
   ?>
 
-  <main>
+  <main class="clientform">
     <?php
       if ($_SESSION['users']['type'] == 1){
         echo "<p class='nameline'>Здравствуйте, администратор</p>";
@@ -23,15 +23,16 @@
         echo "<p class='nameline'>Здравствуйте, " . $_SESSION['users']['name'] . "!</p>";
       }
     ?>
-    <a href='ordersDataBase.php' class='btnclient'>История заказов</a>
+    <p class="clientButton"><a href='ordersDataBase.php' class='btnclient'>История заказов</a></p>
+    <p class='clientButton'><a href='supportfiles/exitProcess.php' class='btnclient'>Выйти</a></p>
     <?php
       if ($_SESSION['users']['type'] == 1){
-        echo "<a href='filmForm.php' class='btnclient'>Форма фильмов</a>";
-        echo "<a href='userForm.php' class='btnclient'>Форма пользователей</a>";
-        echo "<a href='ordersForm/orderForm.php?action=0' class='btnclient'>Форма заказов</a>";
+        echo "<p class='nameline'>Формы транзакций</p>";
+        echo "<p class='clientButton'><a href='filmForm.php' class='btnclient'>Форма фильмов</a></p>";
+        echo "<p class='clientButton'><a href='userForm.php' class='btnclient'>Форма пользователей</a></p>";
+        echo "<p class='clientButton'><a href='ordersForm/orderForm.php?action=0' class='btnclient'>Форма заказов</a></p>";
       }
     ?>
-    <a href='supportfiles/exitProcess.php' class='btnclient'>Выйти</a>
   </main>
 
     <?php include 'footer.php' ?>

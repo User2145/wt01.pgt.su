@@ -11,7 +11,8 @@
   <?php include("header.php") ?>
   <div class="boxy">
       <main>
-        <form action="supportfiles/addUserProcess.php" method="post">
+        <form action="supportfiles/addUserProcess.php" method="post" class="formProcess">
+        <h3>Форма добавления пользователя</h3>
           <p>
             <label>Логин:<br></label>
             <input name="login" type="text" size="15" maxlength="15">
