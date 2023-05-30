@@ -1,0 +1,396 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: roboto, sans-serif;
+}
+
+* {
+  box-sizing: border;
+}
+
+/* Хедер */
+
+#main-nav {
+  background-color: #7080D7;
+  height: 60px;
+  text-align: right;
+}
+
+.logo-holder {
+  float: left;
+  padding-left: 20px;
+}
+
+.logo-img {
+  width: 60px;
+}
+
+#main-menu {
+  list-style: none;
+  margin-top: 0px;
+}
+
+.main-menu-item {
+  display: inline-block;
+}
+
+.main-menu-item a {
+  text-decoration: none;
+  color: black;
+  background-color: #F8F4FF;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.main-menu-item a:hover {
+  background-color: #5d8aa8;
+  transition-duration: 0.5s;
+}
+
+/* Основной */
+
+/* Афиша */
+#afisha-section {
+  background-color: #F8F4FF;
+}
+
+#afisha {
+  list-style: none;
+  display: inline-block;
+}
+
+.afisha-item {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.afisha-genre, .afisha-name {
+  padding: 10px;
+  margin: 10px;
+}
+
+.afisha-image {
+  height: 300px;
+  border-radius: 10px;
+}
+
+.afisha-order-button a{
+  text-decoration: none;
+  color: white;
+  background-color: #162EAE;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.afisha-order-button a:hover{
+  background-color: #5d8aa8;
+  transition-duration: 0.5s;
+}
+
+/* Футер */
+
+#main-footer {
+  width: 100%;
+  background-color: #052F6D;
+  padding-top: 10px;
+  padding-bottom: 200px;
+}
+
+#main-footer-menu {
+  list-style: none;
+}
+
+#main-footer-nav {
+  display: inline-flex;
+}
+
+.footer-title {
+  color: white;
+  font-size: 25px;
+}
+
+.main-footer-menu-item {
+  margin-bottom: 10px;
+}
+
+.main-footer-menu-item a {
+  color: #FFB840;
+  text-decoration: none;
+}
+
+.main-footer-menu-item a:hover {
+  border-bottom: 1px solid #FFB840;
+  transition-duration: 0.5s;
+}
+
+#social-media {
+  display: inline-flex;
+  margin-left: 25%;
+}
+
+#social-media ul {
+  list-style: none;
+}
+
+.social-media-item {
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.social-media-item img {
+  width: 30px;
+}
+
+#main-information {
+  float: right;
+  display: inline-block;
+  padding-right: 30px;
+}
+
+.main-information-item {
+  color: white;
+  font-size: 17px;
+}
+
+.unter-main-information-item {
+  font-size: 14px;
+  color: white;
+}
+
+/* Страница "О нас" */
+
+#info-page {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#info-page p {
+  line-height: 30px;
+}
+
+#info-page li {
+  line-height: 30px;
+}
+
+/* Страница "Контакты" */
+
+#contact {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 50px;
+  padding-bottom: 10em;
+}
+
+#contact-block {
+  display: inline-block;
+  float: left;
+}
+
+#adress-block {
+  display: inline-block;
+  padding-left: 25%;
+}
+
+#timing-block {
+  display: inline-block;
+  float: right;
+}
+
+/* Страница "Новости" */
+
+#news-main {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 50px;
+  padding-bottom: 10em;
+}
+
+.news-block {
+  display: inline-block;
+  padding-bottom: 20px;
+}
+
+.news-image {
+  width: 300px;
+  height: 200px;
+  float: left;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.news-date {
+  color: grey;
+  font-size: 10px;
+  letter-spacing: 3px;
+  padding-bottom: 0px;
+  margin-bottom: 3px;
+}
+
+.news-headline {
+  font-size: 20px;
+  padding-top: 0px;
+  margin-top: 3px;
+}
+
+.news-description {
+  line-height: 30px;
+}
+
+/* Страница входа*/
+
+#login-form {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(0, -50%);
+  background: linear-gradient(#6A94D4, #0F4DA8);
+  border-radius: 10px;
+}
+
+#login-form form {
+  margin: 15px 40px;
+  text-align: center;
+}
+
+#back-url {
+  color: #FFCB73;
+  text-decoration: none;
+}
+
+#back-url:hover {
+  border-bottom: 1px solid #FFCB73;
+  transition-duration: 0.5s;
+}
+
+#login-form h2 {
+  margin: 30px 100px;
+  padding: 0;
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+#login-form input {
+  padding: 10px;
+  width: 100%;
+  font-size: 20px;
+  background: none;
+  outline: none;
+  border: 1px solid white;
+  box-sizing: border-box;
+}
+
+#registration-url {
+  color: #FFCB73;
+  text-decoration: none;
+}
+
+#registration-url:hover {
+  border-bottom: 1px solid #FFCB73;
+  transition-duration: 0.5s;
+}
+
+/* Страница регистрации*/
+
+#registration-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -50%);
+  background: linear-gradient(#0F4DA8, #6A94D4);
+  border-radius: 10px;
+}
+
+#registration-form form {
+  margin: 15px 40px;
+  text-align: center;
+}
+
+#back-url {
+  color: #FFCB73;
+  text-decoration: none;
+}
+
+#back-url:hover {
+  border-bottom: 1px solid #FFCB73;
+  transition-duration: 0.5s;
+}
+
+#registration-form h2 {
+  margin: 30px 100px;
+  padding: 0;
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+#registration-form input {
+  padding: 10px;
+  width: 100%;
+  font-size: 20px;
+  background: none;
+  outline: none;
+  border: 1px solid white;
+  box-sizing: border-box;
+}
+
+/* Форма фильма */
+
+#film-item {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  background: linear-gradient(#d6d6d6, #7a7a7a);
+  border-radius: 10px;
+}
+
+#back-url-film {
+  color: #052F6D;
+  text-decoration: none;
+  font-size: 50px;
+  padding: 10px 10px;
+}
+
+#back-url-film:hover {
+  border-bottom: 10px solid #052F6D;
+  transition-duration: 0.5s;
+}
+
+.film-item-block {
+  margin: 15px 10px;
+  display: inline-block;
+  width: 500px;
+}
+
+.film-item-image {
+  float: left;
+  width: 400px;
+  margin-right: 15px;
+}
+
+.film-comment-username {
+  display: inline-block;
+  font-style: italic;
+}
+
+.film-comment {
+  display: inline-block;
+}
+
+.comment-field {
+  padding: 10px;
+  font-size: 20px;
+  background: none;
+  outline: none;
+  border: 1px solid white;
+  box-sizing: border-box;
+}
