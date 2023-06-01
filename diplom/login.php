@@ -11,7 +11,7 @@
   <main>
     <section id="login-form">
 
-      <form method="post" action="supportfiles/autorizProcess.php" class="formProcess">
+      <form method="post" action="supportfiles/loginProcess.php" class="formProcess">
         <a href="index.php" id="back-url">< Назад</a>
         <h2>Вход</h2><br>
         <label for="username">Логин</label><br>

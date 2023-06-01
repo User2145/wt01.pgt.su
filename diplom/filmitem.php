@@ -10,7 +10,40 @@
 <body>
   <main>
     <a href="index.php" id="back-url-film">< Назад</a>
-    <section id="film-item">
+    <?php
+      include('supportfiles/config.php');
+      $idFilm = $_GET['idFilm'];
+
+      $q = 'SELECT * FROM `films` WHERE films.id = ' . $idFilm . ';';
+      $result = mysqli_query($connection, $q);
+
+      foreach($result as $row){
+        $name[] = $row['name'];
+        $genre[] = $row['genre'];
+        $img[] = $row['img'];
+        $description[] = $row['description'];
+      }
+
+      echo '
+      <section id="film-item">
+
+        <img src="res/film/' . $row['img'] . '" class="film-item-image">
+        <div class="film-item-block">
+          <h1>' . $row['name'] . '</h2>
+          <p class="film-item-description">' . $row['description'] . '</p>
+          <a href="">Заказать билет</a>
+        </div>
+        <div class="film-comment-block">
+          <p class="film-comment-username">Ольга В.</p>
+          <p class="film-comment">Очень интересный фильм!</p>
+        </div>
+        <form class="film-comment-form">
+          <input class="comment-field" type="text" name="comment" required>
+          <input class="comment-field" type="submit" value="Отправить" name="input"></input>
+        </form>
+      </section>';
+    ?>
+    <!-- <section id="film-item">
 
       <img src="res/film/1.jpg" class="film-item-image">
       <div class="film-item-block">
@@ -26,7 +59,7 @@
         <input class="comment-field" type="text" name="comment" required>
         <input class="comment-field" type="submit" value="Отправить" name="input"></input>
       </form>
-    </section>
+    </section> -->
   </main>
 </body>
 </html>

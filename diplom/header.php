@@ -19,7 +19,18 @@
         <li class="main-menu-item"><a href="price.php">Цены</a></li>
         <li class="main-menu-item"><a href="contact.php">Контакты</a></li>
         <li class="main-menu-item"><a href="info.php">О кинотеатре</a></li>
-        <li class="main-menu-item"><a href="login.php">Авторизоваться</a></li>
+        <?php
+          include("supportfiles/config.php");
+          if (!isset($_SESSION['users']['login'])){
+            echo "<li class='main-menu-item'><a href='login.php'>Авторизоваться</a></li>";
+          }
+        ?>
+        <?php
+          include("supportfiles/config.php");
+          if (isset($_SESSION['users']['login'])){
+            echo "<li class='main-menu-item'><a href='cabinet.php'>Личный Кабинет</a></li>";
+          }
+        ?>
       </ul>
     </nav>
   </header>

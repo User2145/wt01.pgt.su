@@ -374,6 +374,7 @@ html, body {
 .film-item-image {
   float: left;
   width: 400px;
+  height: 550px;
   margin-right: 15px;
 }
 
@@ -393,4 +394,70 @@ html, body {
   outline: none;
   border: 1px solid white;
   box-sizing: border-box;
+}
+
+/* Личный кабинет cabinet.php */
+
+#cabinet-section {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#cabinet-url-list {
+  list-style: none;
+}
+
+.cabinet-url-item {
+  margin-bottom: 10px;
+}
+
+.cabinet-url-item a {
+  color: #A66B00;
+}
+
+/* Таблицы */
+
+#table-section {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#table-form td {
+  letter-spacing: 2px;
+}
+
+.table-header td {
+  border: 3px solid black;
+}
+
+.table-content td {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px dashed black;
+  vertical-align: top;
+}
+
+.table-content img {
+  width: 30px;
+}
+
+.table-url {
+  color: #A66B00;
+}
+
+/* Изменения таблицы */
+
+#changes-form-section {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#changes-form-section img {
+  width: 100px;
 }
