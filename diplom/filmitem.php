@@ -24,6 +24,7 @@
         $description[] = $row['description'];
       }
 
+
       echo '
       <section id="film-item">
 
@@ -33,11 +34,23 @@
           <p class="film-item-description">' . $row['description'] . '</p>
           <a href="">Заказать билет</a>
         </div>
-        <div class="film-comment-block">
-          <p class="film-comment-username">Ольга В.</p>
-          <p class="film-comment">Очень интересный фильм!</p>
-        </div>
-        <form class="film-comment-form">
+
+      ';
+      $sql = mysqli_query($connection, 'SELECT `comment`.`comment`, `users`.`name` FROM `comment`, `films`, `users` WHERE `comment`.`idFilm` = ' . $idFilm . ' and `comment`.`idUser` = `users`.`id` and `films`.`id`= ' . $idFilm . ';');
+      while ($result2 = mysqli_fetch_array($sql)) {
+        if($_SESSION['users']['type'] == '1' OR $_SESSION['users']['type'] == '2'){
+          $deleteBTN = '<a href=""><img src="res/delete.png" alt="Удалить комментарий"></a>';
+        }
+        else {
+          $deleteBTN = '';
+        }
+        echo '<div class="film-comment-block">
+                <p class="film-comment-username">' . $result2["name"] . ': </p>
+                <p class="film-comment">' . $result2["comment"] . '</p>
+                ' . $deleteBTN . '
+              </div>';
+      }
+      echo  '<form class="film-comment-form">
           <input class="comment-field" type="text" name="comment" required>
           <input class="comment-field" type="submit" value="Отправить" name="input"></input>
         </form>

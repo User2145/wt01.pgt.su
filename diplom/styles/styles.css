@@ -387,6 +387,12 @@ html, body {
   display: inline-block;
 }
 
+.film-comment-block img {
+  width: 20px;
+  float: right;
+  vertical-align: middle;
+}
+
 .comment-field {
   padding: 10px;
   font-size: 20px;

@@ -27,8 +27,14 @@
         ?>
         <?php
           include("supportfiles/config.php");
-          if (isset($_SESSION['users']['login'])){
+          if (isset($_SESSION['users']['login']) and $_SESSION['users']['type'] == '1'){
             echo "<li class='main-menu-item'><a href='cabinet.php'>Личный Кабинет</a></li>";
+          }
+        ?>
+        <?php
+          include("supportfiles/config.php");
+          if (isset($_SESSION['users']['login'])){
+            echo "<li class='main-menu-item'><a href='supportfiles/exitProcess.php'>Выйти</a></li>";
           }
         ?>
       </ul>

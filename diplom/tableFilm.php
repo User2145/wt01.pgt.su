@@ -38,7 +38,7 @@
               }
               echo '
               <tr class="table-content">
-                <td><a href="process/deleteFilm.php?idFilm=' . $rows["id"] . '"><img src="res/delete.png" alt="Удалить"></a><a href="changeFilm.php?idFilm=' . $rows["id"] . '&idSession1=' . $idSession1 . '&idSession2=' . $idSession2 . '"><img src="res/edit.png" alt="Изменить"></a></td>
+                <td><a href="supportfiles/deleteFilmProcess.php?idFilm=' . $rows["id"] . '"><img src="res/delete.png" alt="Удалить"></a><a href="changeFilm.php?idFilm=' . $rows["id"] . '&idSession1=' . $idSession1 . '&idSession2=' . $idSession2 . '"><img src="res/edit.png" alt="Изменить"></a></td>
                 <td>' . $rows["id"] . '</td>
                 <td>' . $rows["name"] . '</td>
                 <td>' . $rows["genre"] . '</td>
@@ -48,7 +48,7 @@
             }
           ?>
       </table>
-      <a href='addFilm.php' class='table-url'>Добавить фильм</a>
+      <a href='addFilm.php' class='table-url'>Добавить</a>
       <a href='cabinet.php' class='table-url'>Назад</a>
     </form>
   </section>

@@ -34,7 +34,7 @@
         <h3>Форма изменения фильма</h3>
         <p>
           <label>Название фильма:<br></label>
-          <input name="name" type="text" size="15" maxlength="15" value="<?php echo $name?>">
+          <input name="name" type="text" size="15" maxlength="100" value="<?php echo $name?>">
         </p>
         <p>
           <label>Жанры:<br></label>
