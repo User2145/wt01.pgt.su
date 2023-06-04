@@ -27,7 +27,7 @@
         ?>
         <?php
           include("supportfiles/config.php");
-          if (isset($_SESSION['users']['login']) and $_SESSION['users']['type'] == '1'){
+          if ($_SESSION['users']['type'] == '1' OR $_SESSION['users']['type'] == '2'){
             echo "<li class='main-menu-item'><a href='cabinet.php'>Личный Кабинет</a></li>";
           }
         ?>

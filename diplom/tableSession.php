@@ -21,7 +21,7 @@
             while ($rows = mysqli_fetch_array($result)){
               echo '
               <tr class="table-content">
-                <td><a href="process/deleteSession.php?idSession=' . $rows["id"] . '"><img src="res/delete.png" alt="Удалить"></a><a href="changeSession.php?idSession=' . $rows["id"] . '"><img src="res/edit.png" alt="Изменить"></a></td>
+                <td><a href="supportfiles/deleteSessionProcess.php?idSession=' . $rows["id"] . '"><img src="res/delete.png" alt="Удалить"></a><a href="changeSession.php?idSession=' . $rows["id"] . '"><img src="res/edit.png" alt="Изменить"></a></td>
                 <td>' . $rows["id"] . '</td>
                 <td>' . $rows["sessionTime"] . '</td>
                 <td>' . $rows["idFilm"] . '</td>
@@ -31,7 +31,6 @@
           ?>
       </table>
       <a href='addSession.php' class='table-url'>Добавить</a>
-      <a href='cabinet.php' class='table-url'>Назад</a>
     </form>
   </section>
 </main>

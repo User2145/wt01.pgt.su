@@ -42,7 +42,7 @@
               <option value="5">Пользователь<option>
             </select>';
           }
-          if ($type==2){
+          else if ($type==2){
             echo '
             <select name="type">
               <option value="2">Модератор<option>
@@ -50,7 +50,7 @@
               <option value="5">Пользователь<option>
             </select>';
           }
-          if ($type==3){
+          else {
             echo '
             <select name="type">
               <option value="5">Пользователь<option>
@@ -60,9 +60,9 @@
           }
         ?>
       </p>
+      <input name="id" type="hidden" size="15" value="<?php echo $idUser ?>">
       <p><input type="submit" name="clac" value="Изменить"></p>
     </form>
-    <a href="tableUser.php" class='btnCh'>Назад</a>
   </section>
 </main>
 <?php include 'footer.php' ?>

@@ -52,6 +52,17 @@ html, body {
 /* Основной */
 
 /* Афиша */
+
+#unter-header {
+  display: block;
+}
+
+#header-image {
+  display: block;
+  margin-left: 180px;
+  margin-right: auto;
+}
+
 #afisha-section {
   background-color: #F8F4FF;
 }
@@ -241,6 +252,8 @@ html, body {
 
 .news-description {
   line-height: 30px;
+  display: inline;
+  width: ;
 }
 
 /* Страница входа*/
@@ -250,7 +263,7 @@ html, body {
   top: 40%;
   left: 40%;
   transform: translate(0, -50%);
-  background: linear-gradient(#6A94D4, #0F4DA8);
+  background: linear-gradient(#6A94D4, #437DD4);
   border-radius: 10px;
 }
 
@@ -303,9 +316,9 @@ html, body {
 #registration-form {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 30%;
   transform: translate(0, -50%);
-  background: linear-gradient(#0F4DA8, #6A94D4);
+  background: linear-gradient(#437DD4, #6A94D4);
   border-radius: 10px;
 }
 
@@ -346,29 +359,30 @@ html, body {
 /* Форма фильма */
 
 #film-item {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  background: linear-gradient(#d6d6d6, #7a7a7a);
-  border-radius: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 750px;
 }
 
-#back-url-film {
-  color: #052F6D;
+.film-item-description {
+
+}
+
+.film-form-url{
   text-decoration: none;
-  font-size: 50px;
-  padding: 10px 10px;
-}
-
-#back-url-film:hover {
-  border-bottom: 10px solid #052F6D;
-  transition-duration: 0.5s;
-}
-
-.film-item-block {
-  margin: 15px 10px;
+  color: black;
+  background-color: #FFB840;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 2px;
   display: inline-block;
-  width: 500px;
+}
+
+.film-item-block a:hover{
+  background-color: #FFA100;
+  transition-duration: 0.5s;
 }
 
 .film-item-image {
@@ -376,6 +390,10 @@ html, body {
   width: 400px;
   height: 550px;
   margin-right: 15px;
+}
+
+.comment-block {
+  padding-top: 20px;
 }
 
 .film-comment-username {
@@ -387,18 +405,23 @@ html, body {
   display: inline-block;
 }
 
+.film-comment-block {
+  display: block;
+  padding-top: 5px;
+}
+
 .film-comment-block img {
   width: 20px;
   float: right;
   vertical-align: middle;
+  margin-right: 100px;
 }
 
 .comment-field {
   padding: 10px;
   font-size: 20px;
-  background: none;
   outline: none;
-  border: 1px solid white;
+  border: 1px solid black;
   box-sizing: border-box;
 }
 
@@ -433,11 +456,11 @@ html, body {
 }
 
 #table-form td {
-  letter-spacing: 2px;
+  padding: 2px 5px;
 }
 
 .table-header td {
-  border: 3px solid black;
+  border: 1px solid black;
 }
 
 .table-content td {
@@ -451,8 +474,19 @@ html, body {
   width: 30px;
 }
 
-.table-url {
-  color: #A66B00;
+.table-url{
+  text-decoration: none;
+  color: black;
+  background-color: #FFB840;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.table-url:hover{
+  background-color: #FFA100;
+  transition-duration: 0.5s;
 }
 
 /* Изменения таблицы */
@@ -466,4 +500,64 @@ html, body {
 
 #changes-form-section img {
   width: 100px;
+}
+
+/* Страница покупки билета orderBuy.php */
+
+#order-buy-form {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 50px;
+  padding-bottom: 200px;
+}
+
+.order-buy-form-session-btn {
+  display: inline-block;
+  background-color:
+}
+
+#order-buy-form-image-film {
+  width: 200px;
+  float: left;
+  padding-right: 50px;
+}
+
+#order-buy-form
+
+.order-buy-field {
+  padding: 10px;
+  font-size: 20px;
+  outline: none;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+#order-buy-form-text-fields {
+  display: block;
+}
+
+.order-buy-form-td input {
+  line-height: 18px;
+}
+
+/* Страница новости */
+
+#news-item {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 400px;
+}
+
+#news-image {
+  float: left;
+  width: 400px;
+  border-radius: 5px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+#news-description {
+  line-height: 25px;
 }

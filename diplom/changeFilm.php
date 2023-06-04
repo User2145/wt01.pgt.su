@@ -28,9 +28,6 @@
   <main>
     <section id="changes-form-section">
       <form action="supportfiles/changeFilmProcess.php" method="post" class="formProcess">
-        <input type="text" name="idFilm" value="<?php echo $idFilm ?>" style="display: none;">
-        <input type="text" name="idSession1" value="<?php echo $idSession1 ?>" style="display: none;">
-        <input type="text" name="idSession2" value="<?php echo $idSession2 ?>" style="display: none;">
         <h3>Форма изменения фильма</h3>
         <p>
           <label>Название фильма:<br></label>
@@ -59,7 +56,6 @@
           </p> -->
         <p><input type="submit" name="clac" value="Изменить"></p>
       </form>
-    <a href="tableFilm.php" class='btnCh'>Назад</a>
   </section>
   </main>
 

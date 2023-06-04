@@ -23,7 +23,7 @@
             while ($rows = mysqli_fetch_array($result)){
               echo '
               <tr class="table-content">
-                <td><a href="process/deleteUser.php?idUser=' . $rows["id"] . '"><img src="res/delete.png" alt="Удалить"></a><a href="changeUser.php?idUser=' . $rows["id"] . '"><img src="res/edit.png" alt="Изменить"></a></td>
+                <td><a href="supportfiles/deleteUserProcess.php?idUser=' . $rows["id"] . '"><img src="res/delete.png" alt="Удалить"></a><a href="changeUser.php?idUser=' . $rows["id"] . '"><img src="res/edit.png" alt="Изменить"></a></td>
                 <td>' . $rows["id"] . '</td>
                 <td>' . $rows["login"] . '</td>
                 <td>' . $rows["password"] . '</td>
@@ -35,7 +35,6 @@
           ?>
       </table>
       <a href='addUser.php' class='table-url'>Добавить</a>
-      <a href='cabinet.php' class='table-url'>Назад</a>
     </form>
   </section>
 </main>

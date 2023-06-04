@@ -1,78 +1,62 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Вселенная кино</title>
-  <link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
+<?php include 'header.php' ?>
+<?php
+  include('supportfiles/config.php');
+  $idFilm = $_GET['idFilm'];
+
+  $q = 'SELECT * FROM `films` WHERE films.id = ' . $idFilm . ';';
+  $result = mysqli_query($connection, $q);
+
+  foreach($result as $row){
+    $name[] = $row['name'];
+    $genre[] = $row['genre'];
+    $img[] = $row['img'];
+    $description[] = $row['description'];
+  } ?>
   <main>
-    <a href="index.php" id="back-url-film">< Назад</a>
-    <?php
-      include('supportfiles/config.php');
-      $idFilm = $_GET['idFilm'];
-
-      $q = 'SELECT * FROM `films` WHERE films.id = ' . $idFilm . ';';
-      $result = mysqli_query($connection, $q);
-
-      foreach($result as $row){
-        $name[] = $row['name'];
-        $genre[] = $row['genre'];
-        $img[] = $row['img'];
-        $description[] = $row['description'];
-      }
-
-
+    <section id="film-item">
+      <?php
       echo '
-      <section id="film-item">
-
-        <img src="res/film/' . $row['img'] . '" class="film-item-image">
-        <div class="film-item-block">
-          <h1>' . $row['name'] . '</h2>
-          <p class="film-item-description">' . $row['description'] . '</p>
-          <a href="">Заказать билет</a>
-        </div>
-
-      ';
-      $sql = mysqli_query($connection, 'SELECT `comment`.`comment`, `users`.`name` FROM `comment`, `films`, `users` WHERE `comment`.`idFilm` = ' . $idFilm . ' and `comment`.`idUser` = `users`.`id` and `films`.`id`= ' . $idFilm . ';');
-      while ($result2 = mysqli_fetch_array($sql)) {
+      <div class="film-item-block">
+        <img src="res/film/' . $row['img'] . '" alt="Фильм" class="film-item-image">
+        <p>' . $row['genre'] . '</p>
+        <h2>' . $row['name'] . '</h2>
+        <p class="film-item-description">' . $row['description'] . '</p>
+        <a href="orderBuy.php?idFilm=' . $idFilm . '" class="film-form-url">Заказать билет</a>
+      </div>
+      '
+      ?>
+      <div class="comment-block">
+        <h3>Комментарии</h3>
+        <?php $sql = mysqli_query($connection, 'SELECT `comment`.`id`, `comment`.`comment`, `users`.`name` FROM `comment`, `films`, `users` WHERE `comment`.`idFilm` = ' . $idFilm . ' and `comment`.`idUser` = `users`.`id` and `films`.`id`= ' . $idFilm . ';');
         if($_SESSION['users']['type'] == '1' OR $_SESSION['users']['type'] == '2'){
-          $deleteBTN = '<a href=""><img src="res/delete.png" alt="Удалить комментарий"></a>';
+          $deleteBTN = '<img src="res/delete.png" alt="Удалить комментарий">';
+          $buttonComment = '<input class="comment-field" type="submit" value="Отправить" name="input"></input>';
+        }
+        else if (!isset($_SESSION['users']['login'])){
+          $buttonLogin = '<a href="login.php" class="film-form-url">Вы еще не вошли, хотите войти?</a>';
+          $deleteBTN = '';
+          $buttonComment = '';
         }
         else {
           $deleteBTN = '';
+          $buttonComment = '<input class="comment-field" type="submit" value="Отправить" name="input"></input>';
         }
-        echo '<div class="film-comment-block">
-                <p class="film-comment-username">' . $result2["name"] . ': </p>
-                <p class="film-comment">' . $result2["comment"] . '</p>
-                ' . $deleteBTN . '
-              </div>';
-      }
-      echo  '<form class="film-comment-form">
-          <input class="comment-field" type="text" name="comment" required>
-          <input class="comment-field" type="submit" value="Отправить" name="input"></input>
-        </form>
-      </section>';
-    ?>
-    <!-- <section id="film-item">
-
-      <img src="res/film/1.jpg" class="film-item-image">
-      <div class="film-item-block">
-        <h1>Бесславные ублюдки</h2>
-        <p class="film-item-description">Это первый год оккупации Франции Германией. Офицер союзников лейтенант Альдо Рейн (Брэд Питт) собирает команду еврейских солдат для совершения жестоких актов возмездия нацистам, включая снятие их скальпов. Он и его люди объединяют усилия с Бриджет фон Хаммерсмарк, немецкой актрисой и тайным агентом, чтобы уничтожить лидеров Третьего рейха. Их судьбы сходятся с судьбой владелицы театра Шосанны Дрейфус, которая стремится отомстить нацистам за казнь своей семьи.</p>
-        <a href="">Заказать билет</a>
+        while ($result2 = mysqli_fetch_array($sql)) {
+          echo '<div class="film-comment-block">
+                  <p class="film-comment-username">' . $result2["name"] . ': </p>
+                  <p class="film-comment">' . $result2["comment"] . '</p>
+                  <a href="supportfiles/commentDelete.php?idComment=' . $result2["id"] . '">' . $deleteBTN . '</a>
+                </div>';
+        }
+        echo  '<form class="film-comment-form" action="supportfiles/commentAdd.php" method="post">
+            <input type="text" name="film" value="' . $_GET['idFilm'] . '" hidden>
+            <input class="comment-field" type="text" name="comment" required>
+            ' . $buttonComment . '
+            ' . $buttonLogin . '
+          </form>
+        </section>';
+      ?>
       </div>
-      <div class="film-comment-block">
-        <p class="film-comment-username">Ольга В.</p>
-        <p class="film-comment">Очень интересный фильм!</p>
-      </div>
-      <form class="film-comment-form">
-        <input class="comment-field" type="text" name="comment" required>
-        <input class="comment-field" type="submit" value="Отправить" name="input"></input>
-      </form>
-    </section> -->
+    </section>
   </main>
-</body>
-</html>
+<?php include 'footer.php' ?>

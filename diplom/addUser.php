@@ -5,19 +5,19 @@
       <h3>Форма добавления пользователя</h3>
       <p>
         <label>Логин:<br></label>
-        <input name="login" type="text" size="15" maxlength="15">
+        <input name="login" type="text" size="15">
       </p>
       <p>
         <label>Пароль:<br></label>
-        <input name="password" type="text" size="15" maxlength="40">
+        <input name="password" type="text" size="15">
       </p>
       <p>
         <label>Имя:<br></label>
-        <input name="name" type="text" size="15" maxlength="40">
+        <input name="name" type="text" size="15">
       </p>
       <p>
         <label>Почта:<br></label>
-        <input name="email" type="text" size="15" maxlength="40">
+        <input name="email" type="text" size="15">
       </p>
       <p>
         <label>Тип:<br></label>
@@ -29,7 +29,6 @@
       </p>
       <p><input type="submit" name="clac" value="Добавить"></p>
     </form>
-    <a href="tableUser.php" class='btnCh'>Назад</a>
   </section>
 </main>
 <?php include 'footer.php' ?>

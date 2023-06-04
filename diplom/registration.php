@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Вселенная кино</title>
-  <link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
+<?php include 'header.php' ?>
   <main>
     <section id="registration-form">
 
-      <form method="post" action="supportfiles/registProcess.php" class="formProcess">
-        <a href="index.php" id="back-url">< Назад</a>
+      <form method="post" action="supportfiles/registrationProcess.php" class="formProcess">
         <h2>Регистрация</h2><br>
         <p>
           <label>Ваш логин:<br></label>
@@ -38,6 +28,12 @@
       </form>
 
     </section>
+    <?php
+      $i = 0;
+      while ($i < 40) {
+        $i = $i + 1;
+        echo '<br>';
+      }
+    ?>
   </main>
-</body>
-</html>
+<?php include 'footer.php' ?>

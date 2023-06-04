@@ -39,7 +39,6 @@
           ?>
       </table>
       <a href='addOrder.php' class='table-url'>Добавить</a>
-      <a href='cabinet.php' class='table-url'>Назад</a>
     </form>
   </section>
 </main>

@@ -1,23 +1,23 @@
 <?php include("header.php") ?>
 <main>
   <section id="changes-form-section">
-    <form action="supportfiles/addFilmProcess.php" method="post" class="formProcess">
+    <form action="supportfiles/addNewsProcess.php" method="post" class="formProcess">
       <h3>Форма добавления фильма</h3>
       <p>
         <label>Заголовок новости:<br></label>
-        <input name="name" type="text" size="15" maxlength="15">
+        <input name="title" type="text" size="15">
       </p>
       <p>
-        <label>Жанры:<br></label>
-        <input name="genre" type="text" size="15" maxlength="40">
+        <label>Дата:<br></label>
+        <input type="date" name="dateCreate" value="2023-06-04  ">
       </p>
       <p>
         <label>Картинка:<br></label>
-        <input name="img" type="file" size="15" maxlength="15">
+        <input name="image" type="file" size="15" maxlength="15">
       </p>
       <p>
         <label>Описание:<br></label>
-        <textarea name="description" cols="50" rows="10"></textarea>
+        <textarea name="description" cols="50" rows="10" maxlength = "10000"></textarea>
       </p>
       <!-- <p>
         <label>Первый сеанс:<br></label>
@@ -29,7 +29,6 @@
       </p> -->
       <p><input type="submit" name="clac" value="Добавить"></p>
     </form>
-    <a href="tableFilm.php" class='btnCh'>Назад</a>
   </section>
 </main>
 <?php include 'footer.php' ?>

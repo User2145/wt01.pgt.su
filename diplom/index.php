@@ -3,6 +3,9 @@
 
   <main>
     <section id="afisha-section">
+      <div id="unter-header">
+        <img src="res/cinema.png" id="header-image">
+      </div>
       <ul id="afisha">
           <?php
             include("supportfiles/config.php");

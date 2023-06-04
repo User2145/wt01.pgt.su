@@ -29,7 +29,6 @@
       </p> -->
       <p><input type="submit" name="clac" value="Добавить"></p>
     </form>
-    <a href="tableFilm.php" class='btnCh'>Назад</a>
   </section>
 </main>
 <?php include 'footer.php' ?>
