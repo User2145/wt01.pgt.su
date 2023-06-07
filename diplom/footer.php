@@ -26,10 +26,10 @@
       <nav id="social-media">
         <ul>
           <p class="footer-title">Социальные сети</p>
-          <li class="social-media-item"><a href="a"><img src="res/logos/vk.png" alt="Вконтакте"></a></li>
-          <li class="social-media-item"><a href="a"><img src="res/logos/instagram.png" alt="Инстаграмм"></a></li>
-          <li class="social-media-item"><a href="a"><img src="res/logos/twitter.png" alt="Твиттер"></a></li>
-          <li class="social-media-item"><a href="a"><img src="res/logos/youtube.png" alt="Ютуб"></a></li>
+          <li class="social-media-item"><a href="https://vk.com/"><img src="res/logos/vk.png" alt="Вконтакте"></a></li>
+          <li class="social-media-item"><a href="https://www.instagram.com/"><img src="res/logos/instagram.png" alt="Инстаграмм"></a></li>
+          <li class="social-media-item"><a href="https://twitter.com/"><img src="res/logos/twitter.png" alt="Твиттер"></a></li>
+          <li class="social-media-item"><a href="https://www.youtube.com/"><img src="res/logos/youtube.png" alt="Ютуб"></a></li>
         </ul>
       </nav>
       <nav id="main-information">

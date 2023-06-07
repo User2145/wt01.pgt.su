@@ -33,19 +33,27 @@
         <img src="res/display.png" id="order-buy-form-image-display">
         <table>
           <?php
+          $q = 'SELECT * FROM `orders` WHERE `orders`.`idSession_time` = 6;';
+          $resultOrders = mysqli_query($connection, $q);
+
+
 
             $i = 1; //Ряды
             while ($i <= 7) {
               echo '<tr class="order-buy-form-tr">';
               $j = 1; //Места
               while ($j <= 23) {
-                
-                if ($i == $resultOrders["col"] AND $j == $resultOrders["place"]){
-                  echo 'Пошел нахуй';
+
+                foreach($resultOrders as $row){
+                  if ($i == $row["col"] AND $j == $row["place"]){
+                    echo '<td class="order-buy-form-td"><img src="res/place.png" width="14"></td>';
+                  }
+                  else {
+                    echo '<td class="order-buy-form-td"><input name="place" type="radio" value="' . $i . '-' . $j . '"></td>';
+                  }
                 }
-                else {
-                  echo '<td class="order-buy-form-td"><input name="place" type="radio" value="' . $i . '-' . $j . '"></td>';
-                }
+
+
                 $j = $j + 1;
               }
               echo '</tr>';

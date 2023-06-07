@@ -26,7 +26,7 @@
             while ($rows = mysqli_fetch_array($result)){
               echo '
               <tr class="table-content">
-                <td><a href="process/deleteOrder.php?idOrder=' . $rows["id"] . '"><img src="res/delete.png" alt="Удалить"></a><a href="changeOrder.php?idOrder=' . $rows["id"] . '"><img src="res/edit.png" alt="Изменить"></a></td>
+                <td><a href="supportfiles/deleteOrderProcess.php?idOrder=' . $rows["id"] . '"><img src="res/delete.png" alt="Удалить"></a><a href="changeOrder.php?idOrder=' . $rows["id"] . '"><img src="res/edit.png" alt="Изменить"></a></td>
                 <td>' . $rows["id"] . '</td>
                 <td>' . $rows["tel"] . '</td>
                 <td>' . $rows["email"] . '</td>
